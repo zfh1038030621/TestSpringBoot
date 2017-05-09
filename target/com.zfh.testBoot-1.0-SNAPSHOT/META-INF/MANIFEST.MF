@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Implementation-Title: com.zfh.testBoot
+Implementation-Version: 1.0-SNAPSHOT
+Archiver-Version: Plexus Archiver
+Built-By: zhangfanghui
+Implementation-Vendor-Id: com.zfh.testBoot
+Created-By: Apache Maven
+Build-Jdk: 1.8.0_102
+Implementation-URL: http://projects.spring.io/spring-boot/com.zfh.test
+ Boot/
+Implementation-Vendor: Pivotal Software, Inc.
+
