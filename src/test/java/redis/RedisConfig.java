@@ -4,7 +4,6 @@ import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.cache.CacheManager;
-import org.springframework.cache.annotation.CachingConfigurerSupport;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.cache.interceptor.KeyGenerator;
 import org.springframework.context.annotation.Bean;
@@ -24,7 +23,7 @@ import java.lang.reflect.Method;
 /*通过这些简单的@Enable*可以开启一项功能的支持，从而避免自己配置大量的代码，很大程度上降低了使用难度。
 @EnableCaching注解开启注解式的缓存支持*/
 @EnableCaching
-public class RedisConfig extends CachingConfigurerSupport {
+public class RedisConfig  {
     /**
      * 生成JedisConnectionFactory
      * @return

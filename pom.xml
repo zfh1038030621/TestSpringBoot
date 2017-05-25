@@ -7,6 +7,7 @@
     <groupId>com.zfh.testBoot</groupId>
     <artifactId>com.zfh.testBoot</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>war</packaging>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -30,16 +31,15 @@
             <version>4.2.5.RELEASE</version>
             <scope>test</scope>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.springframework/spring-test -->
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-test</artifactId>
-            <version>2.5</version>
-        </dependency>
-
     </dependencies>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
     </properties>
+
+    <build>
+        <plugins>
+            <!-- spring boot 插件-->
+        </plugins>
+    </build>
 </project>
