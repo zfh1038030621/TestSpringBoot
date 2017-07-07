@@ -15,97 +15,11 @@
 	<bean id="cacheTemplate"
 		class="redis.cach.templates.RedisCacheTemplate"
 		abstract="true">
-		<property name="cacheRedis" ref="cacheRedis" />
-	</bean>
-	<bean id="demoCache" parent="cacheTemplate">
-		<property name="prefix" value="prodemo" />
-		<property name="expiry" value="10" />
-	</bean>
-	<bean id="loginAppCache" parent="cacheTemplate">
-		<property name="prefix" value="prologin140703" />
-		<property name="expiry" value="86400" />
-	</bean>
-	<bean id="loginAdminCache" parent="cacheTemplate">
-		<property name="prefix" value="prologin140703212" />
-		<property name="expiry" value="864000" />
-	</bean>
-	<bean id="loginAgentCache" parent="cacheTemplate">
-		<property name="prefix" value="prologin140703213" />
-		<property name="expiry" value="864000" />
-	</bean>
-	<bean id="loginNumCache" parent="cacheTemplate">
-		<property name="prefix" value="prologinNum140707" />
-		<property name="expiry" value="3600" />
-	</bean>
-	<bean id="checkCodeCache" parent="cacheTemplate">
-		<property name="prefix" value="procheckCode140812" />
-		<property name="expiry" value="300" />
-	</bean>
-	<bean id="resetTimeCache" parent="cacheTemplate">
-		<property name="prefix" value="proresetTime140708" />
-		<property name="expiry" value="120" />
-	</bean>
-	<bean id="countryCache" parent="cacheTemplate">
-		<property name="prefix" value="procountryCache140922" />
-		<property name="expiry" value="43200" />
-	</bean>
-	<bean id="timezoneCache" parent="cacheTemplate">
-		<property name="prefix" value="protimezoneCache140922" />
-		<property name="expiry" value="43200" />
-	</bean>
-	<bean id="csrfTokenCache" parent="cacheTemplate">
-		<property name="prefix" value="procsrfTokenCache141120" />
-		<property name="expiry" value="43200" />
-	</bean>
-	<bean id="updateEmailTimeCache" parent="cacheTemplate">
-		<property name="prefix" value="proupdateEmailTime141011" />
-		<property name="expiry" value="120" />
-	</bean>
-	<bean id="loadResourceCache" parent="cacheTemplate">
-		<property name="prefix" value="proupdateEmailTime141011" />
-		<property name="expiry" value="12000" />
-	</bean>
-	<bean id="contactsParsedCache" parent="cacheTemplate">
-		<property name="prefix" value="procontactsParsed141011" />
-		<property name="expiry" value="3600" />
-	</bean>
-	<bean id="proLoginCache" parent="cacheTemplate">
-		<property name="prefix" value="proLogin141011" />
-		<property name="expiry" value="86400" />
-	</bean>
-	<bean id="departmentVersionCache" parent="cacheTemplate">
-		<property name="prefix" value="departmentVersion141011" />
-		<property name="expiry" value="12000000" />
+		<property name="cacheRedis" ref="redisTemplate" />
 	</bean>
 
-	<bean id="enterpriseAccountCache" parent="cacheTemplate">
-		<property name="prefix" value="enterpriseAccountCache141021" />
-		<property name="expiry" value="86400" />
-	</bean>
-
-	<bean id="enterpriseInfoCache" parent="cacheTemplate">
-		<property name="prefix" value="enterpriseInfoCache141021" />
-		<property name="expiry" value="86400" />
-	</bean>
-
-	<bean id="enterpriseProCache" parent="cacheTemplate">
-		<property name="prefix" value="enterpriseProCache141371" />
-		<property name="expiry" value="86400" />
-	</bean>
-	<bean id="agentApplyCache" parent="cacheTemplate">
-		<property name="prefix" value="agentApplyCache141371" />
-		<property name="expiry" value="86400" />
-	</bean>
-	<bean id="agentresetTimeCache" parent="cacheTemplate">
-		<property name="prefix" value="proresetTime140703" />
-		<property name="expiry" value="120" />
-	</bean>
-	<bean id="appRedirectCache" parent="cacheTemplate">
-		<property name="prefix" value="appRedirectCache" />
-		<property name="expiry" value="60" />
-	</bean>
-	<bean id="agentRedirectCache" parent="cacheTemplate">
-		<property name="prefix" value="agentRedirectCache" />
-		<property name="expiry" value="60" />
+	<bean id="testTemplate" parent="cacheTemplate">
+	<property name="prefix" value="prologin140703" />
+	<property name="expiry" value="86400" />
 	</bean>
 </beans>
