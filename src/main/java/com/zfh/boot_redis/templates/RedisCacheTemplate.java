@@ -1,8 +1,4 @@
-package redis.cach.templates;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Set;
+package com.zfh.boot_redis.templates;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,6 +10,10 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.serializer.RedisSerializer;
 import org.springframework.util.StringUtils;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
+
 
 /**
  * 缓存默认实现模板
@@ -24,11 +24,15 @@ public class RedisCacheTemplate implements Cache, InitializingBean {
 
     // 日志对象
     protected static Logger       log     = LoggerFactory.getLogger(RedisCacheTemplate.class);
-    private final static int      dbIndex = 2;
+    private final static int      dbIndex = 0;
     private String                prefix;                                                     // key的前缀，加前缀是为了防止key的重复或者生成新的缓存，该值在整个应用里面不能重复
     private long                  expiry;                                                     // 缓存过期时间(秒)
 
     RedisTemplate<String, Object> cacheRedis;
+
+    public RedisTemplate<String, Object> getCacheRedis(){
+        return cacheRedis;
+    }
 
     @Override
     public void afterPropertiesSet() throws Exception {

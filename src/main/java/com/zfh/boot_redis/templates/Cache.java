@@ -1,4 +1,6 @@
-package redis.cach.templates;
+package com.zfh.boot_redis.templates;
+
+import org.springframework.data.redis.core.RedisTemplate;
 
 import java.util.List;
 
@@ -63,5 +65,8 @@ public interface Cache {
     String getNS(final String key);
     
     public boolean delKeysLike(final String likeKey) ;
+
+
+    public RedisTemplate<String, Object> getCacheRedis();
 
 }

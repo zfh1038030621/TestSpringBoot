@@ -1,4 +1,4 @@
-package testPropertiesOne;
+package com.zfh.boot_propertyInjection;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;

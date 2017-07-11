@@ -13,13 +13,14 @@
 	default-autowire="byName">
 
 	<bean id="cacheTemplate"
-		class="redis.cach.templates.RedisCacheTemplate"
+		class="com.zfh.boot_redis.templates.RedisCacheTemplate"
 		abstract="true">
 		<property name="cacheRedis" ref="redisTemplate" />
 	</bean>
 
 	<bean id="testTemplate" parent="cacheTemplate">
-	<property name="prefix" value="prologin140703" />
-	<property name="expiry" value="86400" />
+	<property name="prefix" value="test" />
+	<property name="expiry" value="10" />
+		<!--boot redis 过期时间默认秒-->
 	</bean>
 </beans>

@@ -1,4 +1,4 @@
-package redis;
+package com.zfh.boot_redis;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.PropertyAccessor;
@@ -23,7 +23,7 @@ import java.lang.reflect.Method;
 /*通过这些简单的@Enable*可以开启一项功能的支持，从而避免自己配置大量的代码，很大程度上降低了使用难度。
 @EnableCaching注解开启注解式的缓存支持*/
 @EnableCaching
-public class RedisConfig  {
+public class RedisConfig {
     /**
      * 生成JedisConnectionFactory
      * @return
@@ -59,13 +59,16 @@ public class RedisConfig  {
     @Bean
     public CacheManager cacheManager(RedisTemplate redisTemplate) {
         RedisCacheManager rcm = new RedisCacheManager(redisTemplate);
+        //设置缓存过期时间
+        // rcm.setDefaultExpiration(60);//秒
+        //设置value的过期时间
         return rcm;
     }
 
     /**
      * RedisTemplate配置
      */
-    @Bean
+    @Bean(name = "redisTemplate")
     public RedisTemplate<String, String> redisTemplate(RedisConnectionFactory factory) {
         StringRedisTemplate template = new StringRedisTemplate(factory);
         setSerializer(template); //设置序列化工具，这样ReportBean不需要实现Serializable接口
