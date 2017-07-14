@@ -36,6 +36,7 @@ public class RedisCacheTemplate implements Cache, InitializingBean {
 
     @Override
     public void afterPropertiesSet() throws Exception {
+        cacheRedis.keys();
         if (cacheRedis == null) {
             throw new Exception("\"cacheRedis\" must be configurated");
         }

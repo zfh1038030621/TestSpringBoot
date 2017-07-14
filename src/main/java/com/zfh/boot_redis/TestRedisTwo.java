@@ -22,7 +22,8 @@ public class TestRedisTwo {
         System.out.println("************************************************************");
         System.out.println(testTemplate.getNS("zzz"));
         System.out.println("************************************************************");
-
+        //通配符
+        testTemplate.delKeysLike("z");
 
         testTemplate.put("qqq","43");
         System.out.println("************************************************************");
